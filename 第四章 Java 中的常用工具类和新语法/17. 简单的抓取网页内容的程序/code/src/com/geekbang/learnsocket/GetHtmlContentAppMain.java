@@ -32,7 +32,7 @@ public class GetHtmlContentAppMain {
         System.out.println("请求已经发送，开始读取主页内容……");
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(s.getInputStream(),
-            StandardCharsets.UTF_8));
+                StandardCharsets.UTF_8));
 
         reader.lines().forEach(System.out::println);
 

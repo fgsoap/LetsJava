@@ -29,40 +29,40 @@ public class LittleSuperMarket {
             MerchandiseV2 m = null;
             if (i > 0 & i % 100 == 0) {
                 m = new ShellColorChangePhone(
-                    "商品" + i,
-                    "ID" + i,
-                    count,
-                    1999,
-                    999,
-                    4.5,
-                    3.5,
-                    4,
-                    128,
-                    "三星",
-                    "Android"
+                        "商品" + i,
+                        "ID" + i,
+                        count,
+                        1999,
+                        999,
+                        4.5,
+                        3.5,
+                        4,
+                        128,
+                        "三星",
+                        "Android"
                 );
             } else if (i > 0 & i % 10 == 0) {
                 m = new Phone(
-                    "商品" + i,
-                    "ID" + i,
-                    count,
-                    1999,
-                    999,
-                    4.5,
-                    3.5,
-                    4,
-                    128,
-                    "索尼",
-                    "Android"
+                        "商品" + i,
+                        "ID" + i,
+                        count,
+                        1999,
+                        999,
+                        4.5,
+                        3.5,
+                        4,
+                        128,
+                        "索尼",
+                        "Android"
                 );
             } else {
                 double purchasePrice = Math.random() * 200;
                 m = new MerchandiseV2(
-                    "商品" + i,
-                    "ID" + i,
-                    count,
-                    1999,
-                    999
+                        "商品" + i,
+                        "ID" + i,
+                        count,
+                        1999,
+                        999
                 );
             }
             // 用创建的商品，给商品数组的第i个引用赋值，all和小超市的商品数组引用指向的是同一个数组对象
@@ -91,28 +91,28 @@ public class LittleSuperMarket {
         return superMarketName;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public int getParkingCount() {
-        return parkingCount;
-    }
-
-    public double getIncomingSum() {
-        return incomingSum;
-    }
-
     public void setSuperMarketName(String superMarketName) {
         this.superMarketName = superMarketName;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
 
+    public int getParkingCount() {
+        return parkingCount;
+    }
+
     public void setParkingCount(int parkingCount) {
         this.parkingCount = parkingCount;
+    }
+
+    public double getIncomingSum() {
+        return incomingSum;
     }
 
     public void setIncomingSum(double incomingSum) {

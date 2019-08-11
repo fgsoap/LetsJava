@@ -17,7 +17,7 @@ public class ShoppingAppMain {
         while (open) {
             new ShoppingTask(shopman).executeTask();
             output("是否继续营业？(Yes)");
-            open = ! input().next().trim().equalsIgnoreCase("no");
+            open = !input().next().trim().equalsIgnoreCase("no");
         }
 
         superMarket.dailyReport();

@@ -5,17 +5,17 @@ public class StopAndSeeThread {
         m1();
     }
 
-   private static void m1(){
+    private static void m1() {
         m2();
-   }
+    }
 
     private static void m2() {
-        int a =999;
+        int a = 999;
         m3();
     }
 
     private static void m3() {
-        int a =333;
+        int a = 333;
         m4();
     }
 

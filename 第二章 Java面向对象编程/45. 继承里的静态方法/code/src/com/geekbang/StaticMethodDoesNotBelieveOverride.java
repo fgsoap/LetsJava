@@ -8,7 +8,7 @@ import com.geekbang.supermarket.ShellColorChangePhone;
 public class StaticMethodDoesNotBelieveOverride {
     public static void main(String[] args) {
         LittleSuperMarket superMarket = new LittleSuperMarket("大卖场",
-            "世纪大道1号", 500, 600, 100);
+                "世纪大道1号", 500, 600, 100);
 
 
         System.out.println("-----1------");
@@ -24,16 +24,16 @@ public class StaticMethodDoesNotBelieveOverride {
         MerchandiseV2 m = superMarket.getMerchandiseOf(100);
 
         // >> TODO 用引用调用静态方法没有覆盖
-        m.staticMethod();
-        ((Phone) m).staticMethod();
-        ((ShellColorChangePhone) m).staticMethod();
+        MerchandiseV2.staticMethod();
+        Phone.staticMethod();
+        ShellColorChangePhone.staticMethod();
         // TODO 有些东西，学会就应该马上忘掉，比如上面使用引用调用静态方法的内容
 
         System.out.println("-----3------");
 
-        ((MerchandiseV2) null).staticMethod();
-        ((Phone) null).staticMethod();
-        ((ShellColorChangePhone) null).staticMethod();
+        MerchandiseV2.staticMethod();
+        Phone.staticMethod();
+        ShellColorChangePhone.staticMethod();
         // TODO 有些东西，学会就应该马上忘掉，比如上面使用有类型的null引用调用静态方法的内容
 
     }

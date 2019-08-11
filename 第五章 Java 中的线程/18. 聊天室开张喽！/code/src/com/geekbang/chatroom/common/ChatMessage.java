@@ -30,12 +30,6 @@ public class ChatMessage {
         return ret;
     }
 
-    public String toMessageString() {
-        StringBuilder ret = new StringBuilder();
-        ret.append(from).append(MESSAGE_SEP).append(to).append(MESSAGE_SEP).append(message).append(MESSAGE_BREAK);
-        return ret.toString();
-    }
-
     public static void main(String[] args) {
         ChatMessage chatMessage = new ChatMessage("testfrom", "testto", "这是一个消息");
         String strMessage = chatMessage.toMessageString().trim();
@@ -44,14 +38,20 @@ public class ChatMessage {
         System.out.println(parsed.equals(chatMessage));
     }
 
+    public String toMessageString() {
+        StringBuilder ret = new StringBuilder();
+        ret.append(from).append(MESSAGE_SEP).append(to).append(MESSAGE_SEP).append(message).append(MESSAGE_BREAK);
+        return ret.toString();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ChatMessage)) return false;
         ChatMessage that = (ChatMessage) o;
         return Objects.equals(from, that.from) &&
-            Objects.equals(to, that.to) &&
-            Objects.equals(message, that.message);
+                Objects.equals(to, that.to) &&
+                Objects.equals(message, that.message);
     }
 
     @Override

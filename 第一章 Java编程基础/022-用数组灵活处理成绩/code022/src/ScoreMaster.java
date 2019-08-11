@@ -41,9 +41,9 @@ public class ScoreMaster {
         while (cont) {
             System.out.println("请选择要进行的操作：");
             System.out.println("1: 求某年最好成绩\n" +
-                "2: 求某年的平均成绩\n" +
-                "3: 求所有年份最好成绩\n" +
-                "4: 求某门课历年最好成绩");
+                    "2: 求某年的平均成绩\n" +
+                    "3: 求所有年份最好成绩\n" +
+                    "4: 求某门课历年最好成绩");
 
             int oprtId = scanner.nextInt();
 

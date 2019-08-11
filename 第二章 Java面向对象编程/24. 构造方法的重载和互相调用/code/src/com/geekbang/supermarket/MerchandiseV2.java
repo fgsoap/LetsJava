@@ -26,7 +26,7 @@ public class MerchandiseV2 {
     // >> TODO 在调用重载的构造方法时，不可以使用成员变量。因为用语意上讲，这个对象还没有被初始化完成，处于中间状态。
     // >> TODO 在构造方法里才能调用重载的构造方法时，必须是方法的第一行。后面可以继续有代码
     public MerchandiseV2(String name, String id, int count, double soldPrice) {
-         // double purPrice = soldPrice * 0.8;
+        // double purPrice = soldPrice * 0.8;
         // this(name, id, count, soldPrice, purchasePrice);
         this(name, id, count, soldPrice, soldPrice * 0.8);
         // double purPrice = soldPrice * 0.8;
@@ -40,8 +40,8 @@ public class MerchandiseV2 {
 
     public void describe() {
         System.out.println("商品名字叫做" + name + "，id是" + id + "。 商品售价是" + soldPrice
-            + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
-            "。销售一个的毛利润是" + (soldPrice - purchasePrice));
+                + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
+                "。销售一个的毛利润是" + (soldPrice - purchasePrice));
     }
 
     public double calculateProfit() {

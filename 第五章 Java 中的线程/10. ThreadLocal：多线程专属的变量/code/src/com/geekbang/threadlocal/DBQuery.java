@@ -8,7 +8,7 @@ public class DBQuery {
         PerformanceTracker.startPhase();
 
         try {
-            Thread.sleep((int)(Math.random()* TimeUnit.SECONDS.toMillis(5)));
+            Thread.sleep((int) (Math.random() * TimeUnit.SECONDS.toMillis(5)));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

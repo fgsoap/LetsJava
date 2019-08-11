@@ -8,7 +8,7 @@ import com.geekbang.supermarket.ShellColorChangePhone;
 public class OverloadTestAppMain {
     public static void main(String[] args) {
         LittleSuperMarket superMarket = new LittleSuperMarket("大卖场",
-            "世纪大道1号", 500, 600, 100);
+                "世纪大道1号", 500, 600, 100);
         MerchandiseV2 m = superMarket.getMerchandiseOf(100);
 
         MerchandiseTest merchandiseTest = new MerchandiseTest();

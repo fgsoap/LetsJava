@@ -9,6 +9,10 @@ public class ShellColorChangePhone extends Phone {
         enableShellColorChange = false;
     }
 
+    public static void staticNoOverride() {
+        System.out.println("staticNoOverride in ShellColorChangePhone");
+    }
+
     public boolean isEnableShellColorChange() {
         return enableShellColorChange;
     }
@@ -35,10 +39,6 @@ public class ShellColorChangePhone extends Phone {
             return -1;
         }
         return super.buy(count);
-    }
-
-    public static void staticNoOverride(){
-        System.out.println("staticNoOverride in ShellColorChangePhone");
     }
 
 }

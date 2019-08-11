@@ -19,10 +19,10 @@ public class SimpleServer {
     }
 
     private static void commWithClient() throws IOException {
-        System.out.println("Server端启动，在端口"+SERVER_PORT+"监听……");
+        System.out.println("Server端启动，在端口" + SERVER_PORT + "监听……");
         try (
-            ServerSocket ss = new ServerSocket(SERVER_PORT);
-            Socket s = ss.accept();
+                ServerSocket ss = new ServerSocket(SERVER_PORT);
+                Socket s = ss.accept()
         ) {
             Chat chat = new Chat("客户端", "你已经成功连到我。我们可以开始对话了。", s);
             chat.chatting();

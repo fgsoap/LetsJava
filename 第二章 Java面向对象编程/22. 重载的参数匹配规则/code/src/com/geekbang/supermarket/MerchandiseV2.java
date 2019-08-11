@@ -19,8 +19,8 @@ public class MerchandiseV2 {
 
     public void describe() {
         System.out.println("商品名字叫做" + name + "，id是" + id + "。 商品售价是" + soldPrice
-            + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
-            "。销售一个的毛利润是" + (soldPrice - purchasePrice));
+                + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
+                "。销售一个的毛利润是" + (soldPrice - purchasePrice));
     }
 
     public double calculateProfit() {
@@ -32,7 +32,7 @@ public class MerchandiseV2 {
     }
 
     // >> TODO 方法调用的时候，参数就不必完全类型一样，实参数可以自动类型转换成形参类型即可
-    public double buyDouble(double count){
+    public double buyDouble(double count) {
         System.out.println("buyDouble(double)被调用了");
         if (this.count < count) {
             return -1;
@@ -44,7 +44,7 @@ public class MerchandiseV2 {
 
 
     // TODO 论斤卖的商品，数量是double。我们把count成员变量改成double类型
-    public double buy(double count){
+    public double buy(double count) {
         System.out.println("buy(double)被调用了");
         if (this.count < count) {
             return -1;

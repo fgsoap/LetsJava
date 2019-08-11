@@ -9,5 +9,4 @@ public class Merchandise {
     public double purchasePrice;
 
 
-
 }

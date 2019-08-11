@@ -16,7 +16,7 @@ public interface Card {
      * @return 优惠额，注意不是优惠后的价格
      */
     double processCardDiscount(double totalCost, double totalCostAfterDiscount,
-                       Customer customer, ShoppingCart shoppingCart);
+                               Customer customer, ShoppingCart shoppingCart);
 
 
 }

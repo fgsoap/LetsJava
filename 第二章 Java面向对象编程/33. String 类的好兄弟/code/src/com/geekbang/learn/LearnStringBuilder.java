@@ -19,7 +19,7 @@ public class LearnStringBuilder {
 
         System.out.println(strBuilder.delete(0, 4).toString());
 
-        System.out.println(strBuilder.insert(3,"LLLLL").toString());
+        System.out.println(strBuilder.insert(3, "LLLLL").toString());
 
 
     }

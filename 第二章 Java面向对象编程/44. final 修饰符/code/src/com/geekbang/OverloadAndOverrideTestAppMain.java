@@ -2,13 +2,11 @@ package com.geekbang;
 
 import com.geekbang.supermarket.LittleSuperMarket;
 import com.geekbang.supermarket.MerchandiseV2;
-import com.geekbang.supermarket.Phone;
-import com.geekbang.supermarket.ShellColorChangePhone;
 
 public class OverloadAndOverrideTestAppMain {
     public static void main(String[] args) {
         LittleSuperMarket superMarket = new LittleSuperMarket("大卖场",
-            "世纪大道1号", 500, 600, 100);
+                "世纪大道1号", 500, 600, 100);
         MerchandiseV2 m = superMarket.getMerchandiseOf(100);
 
         // TODO 让重载的归重载，剩下的是覆盖的舞台

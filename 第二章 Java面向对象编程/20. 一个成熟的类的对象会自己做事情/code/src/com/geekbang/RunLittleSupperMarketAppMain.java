@@ -7,7 +7,7 @@ public class RunLittleSupperMarketAppMain {
         // 创建一个小超市类
         LittleSuperMarket littleSuperMarket = new LittleSuperMarket();
         littleSuperMarket.init("有家小超市", "浦东新区世纪大道666号",
-            100, 200, 200);
+                100, 200, 200);
 //        // 依次给超市的名字，地址，停车位赋值
 //        littleSuperMarket.superMarketName = "有家小超市";
 //        littleSuperMarket.address = "浦东新区世纪大道666号";

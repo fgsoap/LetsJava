@@ -1,11 +1,10 @@
 package com.geekbang.learnsocket.writeit;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
 public class MyServer {
 
@@ -20,7 +19,7 @@ public class MyServer {
     private static void commWithClient() throws IOException {
         try (
                 ServerSocket ss = new ServerSocket(MY_SERVER_PORT);
-                Socket s = ss.accept();
+                Socket s = ss.accept()
         ) {
             MyChat myChat = new MyChat("客户端", "你已经连接上服务器端了", s);
             myChat.chatting();

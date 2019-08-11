@@ -7,8 +7,8 @@ public class RunLittleSupperMarketAppMain {
     public static void main(String[] args) {
         // 创建一个小超市类
         LittleSuperMarket littleSuperMarket = new LittleSuperMarket(
-            "有家小超市", "浦东新区世纪大道666号",
-            100, 200, 200);
+                "有家小超市", "浦东新区世纪大道666号",
+                100, 200, 200);
 
         System.out.println("下面请利润最高的商品自我介绍：");
         MerchandiseV2WithStaticVariable bigProfit = littleSuperMarket.getBiggestProfitMerchandise();
@@ -28,7 +28,6 @@ public class RunLittleSupperMarketAppMain {
         m0.describe();
         double cost3 = m0.buy(10, true);
         System.out.println("VIP 购买10个" + m0.getName() + "的花费为" + cost3);
-
 
 
     }

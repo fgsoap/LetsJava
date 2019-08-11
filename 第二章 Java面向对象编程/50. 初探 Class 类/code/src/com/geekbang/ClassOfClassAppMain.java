@@ -5,7 +5,6 @@ import com.geekbang.supermarket.MerchandiseV2;
 import com.geekbang.supermarket.ShellColorChangePhone;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ClassOfClassAppMain {

@@ -2,6 +2,7 @@ package com.geekbang.supermarket;
 
 public class Phone extends MerchandiseV2 {
 
+    private static int MAX_BUY_ONE_ORDER = 5;
     // 给Phone增加新的属性和方法
     private double screenSize;
     private double cpuHZ;
@@ -9,11 +10,10 @@ public class Phone extends MerchandiseV2 {
     private int storageG;
     private String brand;
     private String os;
-    private static int MAX_BUY_ONE_ORDER = 5;
 
     public Phone(
-        String name, String id, int count, double soldPrice, double purchasePrice,
-        double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os
+            String name, String id, int count, double soldPrice, double purchasePrice,
+            double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os
     ) {
 
         this.screenSize = screenSize;
@@ -29,7 +29,6 @@ public class Phone extends MerchandiseV2 {
         this.setSoldPrice(soldPrice);
         this.setPurchasePrice(purchasePrice);
     }
-
 
 
     // >> TODO 通过使用和父类方法签名一样，而且返回值也必须一样的方法，可以让子类覆盖(override)掉父类的方法
@@ -92,10 +91,10 @@ public class Phone extends MerchandiseV2 {
         System.out.println("此手机商品属性如下");
         describe();
         System.out.println("手机厂商为" + brand + "；系统为" + os + "；硬件配置如下：\n" +
-            "屏幕：" + screenSize + "寸\n" +
-            "cpu主频" + cpuHZ + " GHz\n" +
-            "内存" + memoryG + "Gb\n" +
-            "存储空间" + storageG + "Gb");
+                "屏幕：" + screenSize + "寸\n" +
+                "cpu主频" + cpuHZ + " GHz\n" +
+                "内存" + memoryG + "Gb\n" +
+                "存储空间" + storageG + "Gb");
     }
 
     public boolean meetCondition() {

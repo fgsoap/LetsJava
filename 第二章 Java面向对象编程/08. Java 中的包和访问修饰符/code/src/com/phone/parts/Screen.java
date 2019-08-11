@@ -1,4 +1,3 @@
-
 package com.phone.parts;
 
 public class Screen {

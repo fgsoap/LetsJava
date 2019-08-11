@@ -17,7 +17,7 @@ public class LearnString2 {
 
         int indexOf = content.indexOf('_');
         System.out.println(indexOf);
-        System.out.println(content.substring(indexOf + 1, content.length()));
+        System.out.println(content.substring(indexOf + 1));
 
         int lastIndexOf = content.lastIndexOf("_");
         System.out.println(lastIndexOf);

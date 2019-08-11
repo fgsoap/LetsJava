@@ -28,11 +28,11 @@ public class LittleSuperMarket {
             double purchasePrice = Math.random() * 200;
             // 创建并给商品的属性赋值
             MerchandiseV2 m = new MerchandiseV2(
-                "商品" + i,
-                "ID" + i,
-                count,
-                purchasePrice * (1 + Math.random()),
-                purchasePrice
+                    "商品" + i,
+                    "ID" + i,
+                    count,
+                    purchasePrice * (1 + Math.random()),
+                    purchasePrice
             );
             // 用创建的商品，给商品数组的第i个引用赋值，all和小超市的商品数组引用指向的是同一个数组对象
             merchandises[i] = m;
@@ -46,48 +46,48 @@ public class LittleSuperMarket {
         return superMarketName;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public int getParkingCount() {
-        return parkingCount;
-    }
-
-    public double getIncomingSum() {
-        return incomingSum;
-    }
-
     public void setSuperMarketName(String superMarketName) {
         this.superMarketName = superMarketName;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
 
+    public int getParkingCount() {
+        return parkingCount;
+    }
+
     public void setParkingCount(int parkingCount) {
         this.parkingCount = parkingCount;
+    }
+
+    public double getIncomingSum() {
+        return incomingSum;
     }
 
     public void setIncomingSum(double incomingSum) {
         this.incomingSum = incomingSum;
     }
 
-    public void setMerchandises(MerchandiseV2[] merchandises) {
-        this.merchandises = merchandises;
-    }
-
-    public void setMerchandiseSold(int[] merchandiseSold) {
-        this.merchandiseSold = merchandiseSold;
-    }
-
     public MerchandiseV2[] getMerchandises() {
         return merchandises;
     }
 
+    public void setMerchandises(MerchandiseV2[] merchandises) {
+        this.merchandises = merchandises;
+    }
+
     public int[] getMerchandiseSold() {
         return merchandiseSold;
+    }
+
+    public void setMerchandiseSold(int[] merchandiseSold) {
+        this.merchandiseSold = merchandiseSold;
     }
 
     // 一些特殊的逻辑

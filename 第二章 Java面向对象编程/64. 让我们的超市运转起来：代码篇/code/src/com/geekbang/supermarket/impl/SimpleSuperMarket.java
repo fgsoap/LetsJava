@@ -56,7 +56,7 @@ public class SimpleSuperMarket implements SuperMarket {
         for (int i = 0; i < all.length; i++) {
             if (allCount[i] != all[i].getCount()) {
                 System.out.println(all[i].getCategory().name()
-                    + "\t" + all[i].getName() + "\t" + (allCount[i] - all[i].getCount()));
+                        + "\t" + all[i].getName() + "\t" + (allCount[i] - all[i].getCount()));
             }
         }
 

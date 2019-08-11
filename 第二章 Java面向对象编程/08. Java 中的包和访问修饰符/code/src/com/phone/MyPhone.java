@@ -1,6 +1,7 @@
 package com.phone;
 
-import com.phone.parts.*;
+import com.phone.parts.Memory;
+import com.phone.parts.Storage;
 
 public class MyPhone {
     Memory memory;

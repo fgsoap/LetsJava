@@ -11,7 +11,7 @@ public class OnlineSpecialPhone extends Phone {
 
     // >> TODO 子类覆盖父类的方法，不可以用可见性更低的修饰符，但是可以用更高的修饰符
     // >> TODO 原因是什么呢？
-   public String getNameOfPhone(){
+    public String getNameOfPhone() {
         return super.getNameOfPhone();
-   }
+    }
 }

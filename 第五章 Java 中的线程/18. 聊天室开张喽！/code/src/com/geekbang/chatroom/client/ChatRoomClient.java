@@ -11,8 +11,8 @@ import java.util.Scanner;
 import static com.geekbang.chatroom.common.Constants.*;
 
 public class ChatRoomClient {
-    private String server;
     DataExchange exchange;
+    private String server;
     private String userName;
     private String currentToName;
     private Scanner input = new Scanner(System.in);
@@ -34,7 +34,7 @@ public class ChatRoomClient {
                 try {
                     ChatMessage chatMessage = exchange.receive();
                     if (chatMessage.getFrom().equalsIgnoreCase(ADMIN_NAME)
-                        && chatMessage.getMessage().trim().equalsIgnoreCase(BYE)) {
+                            && chatMessage.getMessage().trim().equalsIgnoreCase(BYE)) {
                         exchange.close();
                         System.out.println("已经离开聊天室，程序结束");
                         System.exit(0);

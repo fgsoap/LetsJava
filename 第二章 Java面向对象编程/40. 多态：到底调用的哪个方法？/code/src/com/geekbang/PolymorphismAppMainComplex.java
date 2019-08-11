@@ -5,7 +5,7 @@ import com.geekbang.supermarket.LittleSuperMarket;
 public class PolymorphismAppMainComplex {
     public static void main(String[] args) {
         LittleSuperMarket superMarket = new LittleSuperMarket("大卖场",
-            "世纪大道1号", 500, 600, 100);
+                "世纪大道1号", 500, 600, 100);
 
         // >> TODO 不仅如此，我们看一个更复杂的例子，describe方法。
         // TODO MerchandiseV2里的describe方法，调用了calculateProfit方法

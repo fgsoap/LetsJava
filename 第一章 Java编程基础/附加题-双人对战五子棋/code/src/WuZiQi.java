@@ -106,14 +106,14 @@ public class WuZiQi {
                     String lineToPrint = "" + (i + 1) + "\t";
                     for (int j = 0; j < size; j++) {
                         char[] arrayToUse =
-                            // Java中的三元操作符，?前面是一个boolean表达式，
-                            // 如果boolean表达式的值为true，则这个表达式的值为冒号前面的值，
-                            // 如果boolean表达式的值为false，则这个表达式的值为冒号后面的值
-                            (i == justMoveLine && j == justMoveColumn) ? qiziJustMove : qizi;
+                                // Java中的三元操作符，?前面是一个boolean表达式，
+                                // 如果boolean表达式的值为true，则这个表达式的值为冒号前面的值，
+                                // 如果boolean表达式的值为false，则这个表达式的值为冒号后面的值
+                                (i == justMoveLine && j == justMoveColumn) ? qiziJustMove : qizi;
 
                         lineToPrint += arrayToUse[qipan[i][j]] + "\t";
                     }
-                    System.out.println(lineToPrint+ (i + 1));
+                    System.out.println(lineToPrint + (i + 1));
                 }
                 System.out.println(header);
 

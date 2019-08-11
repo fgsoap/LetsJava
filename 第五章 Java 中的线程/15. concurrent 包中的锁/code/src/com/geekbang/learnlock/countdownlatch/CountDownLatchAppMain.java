@@ -37,7 +37,7 @@ public class CountDownLatchAppMain {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(Thread.currentThread().getName()+"结束");
+                System.out.println(Thread.currentThread().getName() + "结束");
             }, "线程" + i);
 //            // TODO 如果在线程开始之前，主线程就开始join，会怎么样呢？
 //            Thread.sleep(10);

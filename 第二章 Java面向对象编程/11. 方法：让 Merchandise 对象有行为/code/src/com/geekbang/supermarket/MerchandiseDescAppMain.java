@@ -11,7 +11,7 @@ public class MerchandiseDescAppMain {
         merchandise.id = "DESK9527";
 
         System.out.println("商品名字叫做" + merchandise.name + "，id是" + merchandise.id + "。 商品售价是" + merchandise.soldPrice
-            + "。商品进价是" + merchandise.purchasePrice + "。商品库存量是" + merchandise.count +
-            "。销售一个的毛利润是" + (merchandise.soldPrice - merchandise.purchasePrice));
+                + "。商品进价是" + merchandise.purchasePrice + "。商品库存量是" + merchandise.count +
+                "。销售一个的毛利润是" + (merchandise.soldPrice - merchandise.purchasePrice));
     }
 }

@@ -5,22 +5,8 @@ import java.util.*;
 
 public class MyLinkedList implements List {
 
-    static class ListNode {
-
-        public ListNode(ListNode prev, ListNode next, Object value) {
-            this.prev = prev;
-            this.next = next;
-            this.value = value;
-        }
-
-        ListNode prev;
-        ListNode next;
-        Object value;
-    }
-
     private ListNode start = null;
     private ListNode tail = null;
-
     private int size = 0;
 
     @Override
@@ -84,7 +70,6 @@ public class MyLinkedList implements List {
         return true;
     }
 
-
     @Override
     public Iterator iterator() {
         throw new UnsupportedOperationException();
@@ -109,7 +94,6 @@ public class MyLinkedList implements List {
     public boolean addAll(int index, Collection c) {
         throw new UnsupportedOperationException();
     }
-
 
     @Override
     public Object set(int index, Object element) {
@@ -169,5 +153,17 @@ public class MyLinkedList implements List {
     @Override
     public Object[] toArray(Object[] a) {
         throw new UnsupportedOperationException();
+    }
+
+    static class ListNode {
+
+        ListNode prev;
+        ListNode next;
+        Object value;
+        public ListNode(ListNode prev, ListNode next, Object value) {
+            this.prev = prev;
+            this.next = next;
+            this.value = value;
+        }
     }
 }

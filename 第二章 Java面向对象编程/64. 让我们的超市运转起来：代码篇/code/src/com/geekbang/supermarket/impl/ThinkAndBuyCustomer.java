@@ -32,12 +32,12 @@ public class ThinkAndBuyCustomer extends AbsCustomer implements HasCard {
         }
     }
 
-    public void setCard(Card card) {
-        this.card = card;
-    }
-
     @Override
     public Card getCard() {
         return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 }

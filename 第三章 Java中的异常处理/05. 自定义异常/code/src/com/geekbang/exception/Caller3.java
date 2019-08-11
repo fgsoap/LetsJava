@@ -3,8 +3,6 @@ package com.geekbang.exception;
 import com.geekbang.exception.myexceptions.MyException;
 import com.geekbang.exception.myexceptions.MyRuntimeException;
 
-import java.io.IOException;
-
 public class Caller3 {
     // >> TODO 可以将checked exception包装成unchecked exception或者checked exception。反之也可以
 

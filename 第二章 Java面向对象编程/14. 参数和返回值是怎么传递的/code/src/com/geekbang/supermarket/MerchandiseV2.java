@@ -7,11 +7,12 @@ public class MerchandiseV2 {
     public int count;
     public double soldPrice;
     public double purchasePrice;
+    public MerchandiseV2 gift;
 
     // describe方法变了一下
     public void describe() {
         System.out.println("商品名字叫做" + name + "，id是" + id + "。 商品售价是" + soldPrice
-            + "。商品进价是" + purchasePrice + "。赠品是" + gift.name + "。价值" + gift.purchasePrice);
+                + "。商品进价是" + purchasePrice + "。赠品是" + gift.name + "。价值" + gift.purchasePrice);
     }
 
     public double calculateProfit() {
@@ -74,6 +75,8 @@ public class MerchandiseV2 {
         return count * purchasePrice > merchandiseV2.purchasePrice * merchandiseV2.count;
     }
 
+    // ---------------------------新增加的内容---------------------------
+
     // >> TODO 参数可以是任何类型，包括自定义类型，甚至是自己的类型都没问题
     public boolean isTheBiggestTotalValueOne(LittleSuperMarket littleSuperMarket) {
         double totalValue = count * purchasePrice;
@@ -87,10 +90,6 @@ public class MerchandiseV2 {
         }
         return true;
     }
-
-    // ---------------------------新增加的内容---------------------------
-
-    public MerchandiseV2 gift;
 
     public double getSoldPrice() {
         return soldPrice;

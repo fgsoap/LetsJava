@@ -17,8 +17,8 @@ public class ShellColorChangePhone extends Phone {
         this.enableShellColorChange = enableShellColorChange;
     }
 
-    public double buy(int count){
-        if(count < 2){
+    public double buy(int count) {
+        if (count < 2) {
             System.out.println("不单卖，至少买两个");
             return -2;
         }

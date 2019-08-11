@@ -56,8 +56,8 @@ public class AtomicNumberAppMain {
     @Override
     public String toString() {
         return "AtomicNumberAppMain{" +
-            "atomicLong=" + atomicLong +
-            ", longVar=" + longVar +
-            '}';
+                "atomicLong=" + atomicLong +
+                ", longVar=" + longVar +
+                '}';
     }
 }

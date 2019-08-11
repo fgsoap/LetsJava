@@ -18,8 +18,8 @@ public class MerchandiseV2Overload {
 
     public void describe() {
         System.out.println("商品名字叫做" + name + "，id是" + id + "。 商品售价是" + soldPrice
-            + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
-            "。销售一个的毛利润是" + (soldPrice - purchasePrice));
+                + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
+                "。销售一个的毛利润是" + (soldPrice - purchasePrice));
     }
 
     public double calculateProfit() {
@@ -40,7 +40,8 @@ public class MerchandiseV2Overload {
     }
 
 
-    public double buy(int count) { return buy(count, false);
+    public double buy(int count) {
+        return buy(count, false);
     }
 
     // TODO  最后都补充好参数，调用参数最全的一个方法

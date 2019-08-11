@@ -1,8 +1,5 @@
 package com.geekbang.supermarket.mockthis;
 
-import com.geekbang.supermarket.LittleSuperMarket;
-import com.geekbang.supermarket.mockthis.MerchandiseV2MockThis;
-
 public class RunLittleSupperMarketWithMockThisMerchandiseAppMain {
     public static void main(String[] args) {
         // 创建一个小超市类

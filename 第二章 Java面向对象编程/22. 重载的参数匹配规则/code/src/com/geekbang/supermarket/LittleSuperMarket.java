@@ -44,28 +44,28 @@ public class LittleSuperMarket {
         return superMarketName;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public int getParkingCount() {
-        return parkingCount;
-    }
-
-    public double getIncomingSum() {
-        return incomingSum;
-    }
-
     public void setSuperMarketName(String superMarketName) {
         this.superMarketName = superMarketName;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
 
+    public int getParkingCount() {
+        return parkingCount;
+    }
+
     public void setParkingCount(int parkingCount) {
         this.parkingCount = parkingCount;
+    }
+
+    public double getIncomingSum() {
+        return incomingSum;
     }
 
     public void setIncomingSum(double incomingSum) {
@@ -114,6 +114,7 @@ public class LittleSuperMarket {
 
     /**
      * 赚钱
+     *
      * @param toBeAdded
      */
     public void addIncomingSum(double toBeAdded) {
@@ -122,6 +123,7 @@ public class LittleSuperMarket {
 
     /**
      * 花钱
+     *
      * @param toBeSpent
      * @return
      */

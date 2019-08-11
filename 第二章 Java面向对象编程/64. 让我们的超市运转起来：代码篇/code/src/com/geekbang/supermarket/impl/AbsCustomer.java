@@ -7,18 +7,21 @@ import com.geekbang.supermarket.interfaces.ShoppingCart;
 import static com.geekbang.supermarket.util.ShoppingUtil.getRandomCategory;
 
 public abstract class AbsCustomer implements Customer {
+    public static final int DEFAULT_GUANG_COUNT = 5;
     private Category shouldBuy;
     private String custId;
     private double moneySpent;
     private int guangLeft = 0;
     private int guangCount = 0;
 
-    public static final int DEFAULT_GUANG_COUNT = 5;
-
     public AbsCustomer(String custId, Category shouldBuy, int guangCount) {
         this.shouldBuy = shouldBuy;
         this.guangCount = guangCount;
         this.custId = custId;
+    }
+
+    public AbsCustomer(String custId, Category shouldBuy) {
+        this(custId, shouldBuy, DEFAULT_GUANG_COUNT);
     }
 
     public int getGuangCount() {
@@ -27,10 +30,6 @@ public abstract class AbsCustomer implements Customer {
 
     public void setGuangCount(int guangCount) {
         this.guangCount = guangCount;
-    }
-
-    public AbsCustomer(String custId, Category shouldBuy) {
-        this(custId, shouldBuy, DEFAULT_GUANG_COUNT);
     }
 
     @Override

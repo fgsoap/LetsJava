@@ -23,8 +23,8 @@ public class Chat {
         Scanner in = new Scanner(System.in);
 
         try (
-            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), SERVER_CHARSET));
-            PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), SERVER_CHARSET));
+                BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), SERVER_CHARSET));
+                PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), SERVER_CHARSET))
         ) {
             System.out.println("Socket连接成功！建立输入输出");
             if (greetings != null) {

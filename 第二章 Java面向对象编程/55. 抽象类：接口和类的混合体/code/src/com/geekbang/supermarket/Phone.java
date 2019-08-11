@@ -14,9 +14,9 @@ public class Phone extends AbstractExpireDateMerchandise {
     private String os;
 
     public Phone(
-        String name, String id, int count, double soldPrice, double purchasePrice,
-        double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os,
-        Date produceDate, Date expirationDate
+            String name, String id, int count, double soldPrice, double purchasePrice,
+            double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os,
+            Date produceDate, Date expirationDate
     ) {
         super(name, id, count, soldPrice, purchasePrice, produceDate, expirationDate);
         this.screenSize = screenSize;
@@ -37,10 +37,10 @@ public class Phone extends AbstractExpireDateMerchandise {
         System.out.println("此手机商品属性如下");
         describe();
         System.out.println("手机厂商为" + brand + "；系统为" + os + "；硬件配置如下：\n" +
-            "屏幕：" + screenSize + "寸\n" +
-            "cpu主频" + cpuHZ + " GHz\n" +
-            "内存" + memoryG + "Gb\n" +
-            "存储空间" + storageG + "Gb\n");
+                "屏幕：" + screenSize + "寸\n" +
+                "cpu主频" + cpuHZ + " GHz\n" +
+                "内存" + memoryG + "Gb\n" +
+                "存储空间" + storageG + "Gb\n");
 
     }
 

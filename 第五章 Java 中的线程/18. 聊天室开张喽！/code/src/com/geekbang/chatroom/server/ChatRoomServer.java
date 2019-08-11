@@ -109,7 +109,7 @@ public class ChatRoomServer {
                 return CHAT_WITH_START + ADMIN_NAME;
             } else {
                 return CHAT_WITH_START + ADMIN_NAME + userNameListSep + CHAT_WITH_START
-                    + String.join(userNameListSep + CHAT_WITH_START, name2DataEx.keySet());
+                        + String.join(userNameListSep + CHAT_WITH_START, name2DataEx.keySet());
             }
         }
 
@@ -118,9 +118,9 @@ public class ChatRoomServer {
             while (true) {
                 String allNames = getAllNames();
                 dataExchange.send(new ChatMessage(ADMIN_NAME, NO_NAME,
-                    (errorMsg == null ? "" : "用户名非法，错误信息为：" + errorMsg + ":") +
-                        "现有的用户名有：" + allNames
-                        + "。请输入你的用户名："));
+                        (errorMsg == null ? "" : "用户名非法，错误信息为：" + errorMsg + ":") +
+                                "现有的用户名有：" + allNames
+                                + "。请输入你的用户名："));
 
                 try {
                     ChatMessage chatMessage = dataExchange.receive();

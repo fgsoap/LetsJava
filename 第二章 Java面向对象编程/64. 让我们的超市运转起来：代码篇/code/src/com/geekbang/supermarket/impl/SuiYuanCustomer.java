@@ -16,7 +16,7 @@ public class SuiYuanCustomer extends AbsCustomer {
     public int buyMerchandise(Merchandise merchandise) {
         // 买一个商品的概率
         double chanceToBuy = merchandise.getCategory() == getShouldBuy() ?
-            MUST_BUY_CHANCE : GUANG_BUY_CHANCE;
+                MUST_BUY_CHANCE : GUANG_BUY_CHANCE;
 
         // 缘分不到，那就返回 0
         if (chanceToBuy < Math.random()) {

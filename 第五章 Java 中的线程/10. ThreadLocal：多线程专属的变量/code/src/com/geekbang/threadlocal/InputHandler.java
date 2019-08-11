@@ -2,10 +2,6 @@ package com.geekbang.threadlocal;
 
 public class InputHandler {
 
-    public String getInput() {
-        return produceString();
-    }
-
     private static String produceString() {
         PerformanceTracker.startPhase();
         StringBuilder ret = new StringBuilder();
@@ -16,5 +12,9 @@ public class InputHandler {
         }
         PerformanceTracker.endPhase("InputGen");
         return ret.toString();
+    }
+
+    public String getInput() {
+        return produceString();
     }
 }

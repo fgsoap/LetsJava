@@ -11,6 +11,15 @@ public interface ExpireDateMerchandise {
     // >> TODO 缺省方法，也有this自引用，但是只能调用接口里的方法，或者继承的接口里的方法
     // >> TODO 因为能new出实例来的，肯定是实现了所有方法的，this自引用就是指向那个对象，所以使用起来不会有问题
 
+    // >> TODO 接口中可以有静态方法，不需要用default修饰。静态方法可以被实现接口的类继承
+    static long daysBetween(long from, long to) {
+        long gap = to - from;
+        if (gap < 0) {
+            return -1;
+        }
+        return gap / (24 * 3600 * 1000);
+    }
+
     /**
      * 截止到当前，商品的保质期天数是否超过传递的天数
      *
@@ -29,7 +38,7 @@ public interface ExpireDateMerchandise {
     /**
      * @return 商品保质期到期日
      */
-    public abstract Date getExpireDate();
+    Date getExpireDate();
 
     /**
      * @return 截止到当前，剩余保质期还剩下总保质期长度的百分比
@@ -52,15 +61,6 @@ public interface ExpireDateMerchandise {
 
     private long daysAfterProduce() {
         return daysBetween(getProducedDate().getTime(), System.currentTimeMillis());
-    }
-
-    // >> TODO 接口中可以有静态方法，不需要用default修饰。静态方法可以被实现接口的类继承
-    public static long daysBetween(long from, long to) {
-        long gap = to - from;
-        if (gap < 0) {
-            return -1;
-        }
-        return gap / (24 * 3600 * 1000);
     }
 
     default void testDuplicatedMethod() {

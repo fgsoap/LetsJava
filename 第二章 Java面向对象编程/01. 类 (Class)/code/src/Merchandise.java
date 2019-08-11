@@ -1,4 +1,3 @@
-
 // >> TODO 一个类以public class开头，public class代表这个类是公共类，类名必须和文件名相同。
 // >> TODO public class后面紧跟类名，然后是一对打括号的类体
 public class Merchandise {

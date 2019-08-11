@@ -75,7 +75,7 @@ public class LittleSuperMarket {
         double maxPurchasePrice = -1;
 
         for (MerchandiseV2 m : merchandises) {
-            if(m.getPurchasePrice()>maxPurchasePrice){
+            if (m.getPurchasePrice() > maxPurchasePrice) {
                 maxPurchasePrice = m.getPurchasePrice();
             }
         }
@@ -89,43 +89,37 @@ public class LittleSuperMarket {
         return superMarketName;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public int getParkingCount() {
-        return parkingCount;
-    }
-
-    public double getIncomingSum() {
-        return incomingSum;
-    }
-
     public void setSuperMarketName(String superMarketName) {
         this.superMarketName = superMarketName;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
 
+    public int getParkingCount() {
+        return parkingCount;
+    }
+
     public void setParkingCount(int parkingCount) {
         this.parkingCount = parkingCount;
+    }
+
+    public double getIncomingSum() {
+        return incomingSum;
     }
 
     public void setIncomingSum(double incomingSum) {
         this.incomingSum = incomingSum;
     }
 
-    public void setMerchandises(MerchandiseV2[] merchandises) {
-        this.merchandises = merchandises;
-    }
-
     public void setMerchandiseSold(int[] merchandiseSold) {
         this.merchandiseSold = merchandiseSold;
     }
-
-    // 一些特殊的逻辑
 
     /**
      * 得到利润最高的商品
@@ -144,6 +138,8 @@ public class LittleSuperMarket {
         return curr;
     }
 
+    // 一些特殊的逻辑
+
     /**
      * 根据索引获取商品
      *
@@ -159,6 +155,10 @@ public class LittleSuperMarket {
 
     public MerchandiseV2[] getMerchandises() {
         return merchandises;
+    }
+
+    public void setMerchandises(MerchandiseV2[] merchandises) {
+        this.merchandises = merchandises;
     }
 
     /**

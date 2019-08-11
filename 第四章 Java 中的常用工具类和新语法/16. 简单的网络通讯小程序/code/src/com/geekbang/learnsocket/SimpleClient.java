@@ -14,7 +14,7 @@ public class SimpleClient {
 
         try (
                 // 127.0.0.1
-            Socket socket = new Socket("localhost", SERVER_PORT);
+                Socket socket = new Socket("localhost", SERVER_PORT)
         ) {
             Chat chat = new Chat("服务器端", null, socket);
             chat.chatting();

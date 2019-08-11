@@ -16,7 +16,7 @@ public class Caller1 {
         try {
             caller2.call3Exception();
         } catch (ClassNotFoundException ex) {
-            System.out.println("got exception in Caller1: "+ex.getMessage());
+            System.out.println("got exception in Caller1: " + ex.getMessage());
         }
         System.out.println("Caller1.call2Exception结束");
     }

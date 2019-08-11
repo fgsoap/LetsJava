@@ -3,6 +3,10 @@ package com.geekbang.supermarket;
 // >> TODO 用final 修饰类看看？
 public class Phone extends MerchandiseV2 {
 
+    // >> TODO 用 final 修饰静态变量看看？
+    private final static int MAX_BUY_ONE_ORDER = 9;
+    // >> TODO 用 final 修饰引用，最难理解
+    private final MerchandiseV2 gift;
     // >> TODO 用 final 修饰成员变量看看？
     private double screenSize;
     private double cpuHZ;
@@ -10,10 +14,6 @@ public class Phone extends MerchandiseV2 {
     private int storageG;
     private String brand;
     private String os;
-    // >> TODO 用 final 修饰静态变量看看？
-    private final static int MAX_BUY_ONE_ORDER = 9;
-    // >> TODO 用 final 修饰引用，最难理解
-    private final MerchandiseV2 gift;
 
 
     // >> TODO 构造方法不能用 final 修饰
@@ -29,6 +29,11 @@ public class Phone extends MerchandiseV2 {
         this.brand = brand;
         this.os = os;
         this.gift = gift;
+    }
+
+    public static void staticNoOverride() {
+
+        System.out.println("staticNoOverride in Phone");
     }
 
     // >> TODO 用 final 修饰方法看看？
@@ -63,13 +68,13 @@ public class Phone extends MerchandiseV2 {
         gift.describe();
     }
 
-    public MerchandiseV2 getGift() {
-        return gift;
-    }
-
 //    public void setGift(MerchandiseV2 gift) {
 //        this.gift = gift;
 //    }
+
+    public MerchandiseV2 getGift() {
+        return gift;
+    }
 
     public boolean meetCondition() {
         return true;
@@ -121,11 +126,6 @@ public class Phone extends MerchandiseV2 {
 
     public void setOs(String os) {
         this.os = os;
-    }
-
-    public static void staticNoOverride() {
-
-        System.out.println("staticNoOverride in Phone");
     }
 
 }

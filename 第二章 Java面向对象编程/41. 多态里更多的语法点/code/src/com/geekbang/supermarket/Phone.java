@@ -2,6 +2,7 @@ package com.geekbang.supermarket;
 
 public class Phone extends MerchandiseV2 {
 
+    private static int MAX_BUY_ONE_ORDER = 5;
     // 给Phone增加新的属性和方法
     private double screenSize;
     private double cpuHZ;
@@ -9,11 +10,10 @@ public class Phone extends MerchandiseV2 {
     private int storageG;
     private String brand;
     private String os;
-    private static int MAX_BUY_ONE_ORDER = 5;
 
     public Phone(
-        String name, String id, int count, double soldPrice, double purchasePrice,
-        double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os
+            String name, String id, int count, double soldPrice, double purchasePrice,
+            double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os
     ) {
         super(name, id, count, soldPrice * 1.2, purchasePrice);
         this.screenSize = screenSize;
@@ -22,6 +22,10 @@ public class Phone extends MerchandiseV2 {
         this.storageG = storageG;
         this.brand = brand;
         this.os = os;
+    }
+
+    public static void staticNoOverride() {
+        System.out.println("staticNoOverride in Phone");
     }
 
     public double buy(int count) {
@@ -41,10 +45,10 @@ public class Phone extends MerchandiseV2 {
         System.out.println("此手机商品属性如下");
         super.describe();
         System.out.println("手机厂商为" + brand + "；系统为" + os + "；硬件配置如下：\n" +
-            "屏幕：" + screenSize + "寸\n" +
-            "cpu主频" + cpuHZ + " GHz\n" +
-            "内存" + memoryG + "Gb\n" +
-            "存储空间" + storageG + "Gb");
+                "屏幕：" + screenSize + "寸\n" +
+                "cpu主频" + cpuHZ + " GHz\n" +
+                "内存" + memoryG + "Gb\n" +
+                "存储空间" + storageG + "Gb");
     }
 
     public boolean meetCondition() {
@@ -97,9 +101,5 @@ public class Phone extends MerchandiseV2 {
 
     public void setOs(String os) {
         this.os = os;
-    }
-
-    public static void staticNoOverride(){
-        System.out.println("staticNoOverride in Phone");
     }
 }

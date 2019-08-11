@@ -3,7 +3,7 @@ package com.geekbang.supermarket;
 public class TestVizSamePkgAppMain {
     public static void main(String[] args) {
         LittleSuperMarket superMarket = new LittleSuperMarket("大卖场",
-            "世纪大道1号", 500, 600, 100);
+                "世纪大道1号", 500, 600, 100);
 
         // >> TODO 同一个包里的代码，可以访问缺省和protected
         Phone ph = (Phone) superMarket.getMerchandiseOf(10);

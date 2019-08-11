@@ -6,13 +6,12 @@ import static com.geekbang.supermarket.util.ShoppingUtil.output;
 
 public class SimpleShopman implements Shopman {
 
+    private static final int MAX_BUY_DEFAULT = 9;
     private SuperMarket superMarket;
 
     public SimpleShopman(SuperMarket superMarket) {
         this.superMarket = superMarket;
     }
-
-    private static final int MAX_BUY_DEFAULT = 9;
 
     @Override
     public void serveCustomer(Customer customer) {

@@ -2,6 +2,7 @@ package com.geekbang.supermarket;
 
 public class Phone extends MerchandiseV2 {
 
+    private static int MAX_BUY_ONE_ORDER = 5;
     // 给Phone增加新的属性和方法
     private double screenSize;
     private double cpuHZ;
@@ -9,56 +10,10 @@ public class Phone extends MerchandiseV2 {
     private int storageG;
     private String brand;
     private String os;
-    private static int MAX_BUY_ONE_ORDER = 5;
-
-    // >> TODO 使用super可以调用父类的方法和属性（当然必须满足访问控制符的控制）
-    public double buy(int count) {
-        if (count > MAX_BUY_ONE_ORDER) {
-            System.out.println("购买失败，手机一次最多只能买" + MAX_BUY_ONE_ORDER + "个");
-            return -2;
-        }
-        return super.buy(count);
-    }
-
-    public String getName() {
-        return this.brand + ":" + this.os + ":" + name;
-    }
-
-    public void describe() {
-        System.out.println("此手机商品属性如下");
-        super.describe();
-        System.out.println("手机厂商为" + brand + "；系统为" + os + "；硬件配置如下：\n" +
-            "屏幕：" + screenSize + "寸\n" +
-            "cpu主频" + cpuHZ + " GHz\n" +
-            "内存" + memoryG + "Gb\n" +
-            "存储空间" + storageG + "Gb");
-    }
-
-    // >> TODO super是子类和父类交流的桥梁，但是并不是父类的引用
-    // >> TODO 所以，super和this自引用不一样，不是简单可以模拟的（可以模拟的话不就成了组合了吗）
-//    public MerchandiseV2 getParent(){
-//        return super;
-//    }
-
-    public Phone getThisPhone(){
-        return this;
-    }
-
-    // >> TODO 使用super可以调用父类的public属性，但是super不是一个引用。
-    public void accessParentProps() {
-        System.out.println("父类里的name属性：" + super.name);
-    }
-
-    public void useSuper() {
-        // >> TODO super的用法就像是一个父类的引用。它是继承的一部分，像组合的那部分，但不是全部
-        super.describe();
-        super.buy(66);
-        System.out.println("父类里的count属性：" + super.count);
-    }
 
     public Phone(
-        String name, String id, int count, double soldPrice, double purchasePrice,
-        double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os
+            String name, String id, int count, double soldPrice, double purchasePrice,
+            double screenSize, double cpuHZ, int memoryG, int storageG, String brand, String os
     ) {
         // >> TODO 可以认为，创建子类对象的时候，也就同时创建了一个隐藏的父类对象
 
@@ -75,6 +30,51 @@ public class Phone extends MerchandiseV2 {
         this.setCount(count);
         this.setSoldPrice(soldPrice);
         this.setPurchasePrice(purchasePrice);
+    }
+
+    // >> TODO 使用super可以调用父类的方法和属性（当然必须满足访问控制符的控制）
+    public double buy(int count) {
+        if (count > MAX_BUY_ONE_ORDER) {
+            System.out.println("购买失败，手机一次最多只能买" + MAX_BUY_ONE_ORDER + "个");
+            return -2;
+        }
+        return super.buy(count);
+    }
+
+    public String getName() {
+        return this.brand + ":" + this.os + ":" + name;
+    }
+
+    // >> TODO super是子类和父类交流的桥梁，但是并不是父类的引用
+    // >> TODO 所以，super和this自引用不一样，不是简单可以模拟的（可以模拟的话不就成了组合了吗）
+//    public MerchandiseV2 getParent(){
+//        return super;
+//    }
+
+    public void describe() {
+        System.out.println("此手机商品属性如下");
+        super.describe();
+        System.out.println("手机厂商为" + brand + "；系统为" + os + "；硬件配置如下：\n" +
+                "屏幕：" + screenSize + "寸\n" +
+                "cpu主频" + cpuHZ + " GHz\n" +
+                "内存" + memoryG + "Gb\n" +
+                "存储空间" + storageG + "Gb");
+    }
+
+    public Phone getThisPhone() {
+        return this;
+    }
+
+    // >> TODO 使用super可以调用父类的public属性，但是super不是一个引用。
+    public void accessParentProps() {
+        System.out.println("父类里的name属性：" + super.name);
+    }
+
+    public void useSuper() {
+        // >> TODO super的用法就像是一个父类的引用。它是继承的一部分，像组合的那部分，但不是全部
+        super.describe();
+        super.buy(66);
+        System.out.println("父类里的count属性：" + super.count);
     }
 
     public boolean meetCondition() {

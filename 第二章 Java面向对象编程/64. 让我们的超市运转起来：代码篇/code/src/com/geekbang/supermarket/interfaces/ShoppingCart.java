@@ -56,7 +56,7 @@ public class ShoppingCart {
                 continue;
             }
             sb.append(m.getCategory().name()).append("\t").append(m.getName()).append("\t")
-                .append(count[pos]).append("\t").append(m.getPurchasePrice() * count[pos]).append("\n");
+                    .append(count[pos]).append("\t").append(m.getPurchasePrice() * count[pos]).append("\n");
 
         }
         sb.append("应付总额为：").append(calculateOriginCost()).append("\n");

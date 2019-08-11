@@ -1,12 +1,13 @@
 package com.geekbang;
 
 import com.geekbang.supermarket.MerchandiseV2WithStaticVariable;
-import  static com.geekbang.supermarket.MerchandiseV2WithStaticVariable.*;
+
+import static com.geekbang.supermarket.MerchandiseV2WithStaticVariable.DISCOUNT_FOR_VIP;
 
 public class MerchandiseV2DescAppMain {
     public static void main(String[] args) {
         MerchandiseV2WithStaticVariable merchandise = new MerchandiseV2WithStaticVariable
-            ("书桌", "DESK9527", 40, 999.9, 500);
+                ("书桌", "DESK9527", 40, 999.9, 500);
 
         merchandise.describe();
 

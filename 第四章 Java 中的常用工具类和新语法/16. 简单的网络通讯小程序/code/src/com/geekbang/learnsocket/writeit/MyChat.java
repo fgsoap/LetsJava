@@ -1,7 +1,6 @@
 package com.geekbang.learnsocket.writeit;
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -27,7 +26,7 @@ public class MyChat {
                         new InputStreamReader(s.getInputStream(), MY_COMM_CHARSET));
                 PrintWriter pw = new PrintWriter(
                         new OutputStreamWriter(s.getOutputStream(), MY_COMM_CHARSET)
-                );
+                )
         ) {
             if (greeting != null) {
                 pw.println(greeting);

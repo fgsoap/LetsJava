@@ -5,7 +5,7 @@ import com.geekbang.supermarket.LittleSuperMarket;
 public class PolymorphismAppMainSimple {
     public static void main(String[] args) {
         LittleSuperMarket superMarket = new LittleSuperMarket("大卖场",
-            "世纪大道1号", 500, 600, 100);
+                "世纪大道1号", 500, 600, 100);
 
         // >> TODO 虽然是用的父类的引用指向的不同类型的对象，调用getName方法时，实际执行的方法取决于对象的类型，而非引用的类型
         // >> TODO 也就是说，能调用哪些方法，是引用决定的，具体执行哪个类的方法，是引用指向的对象决定的。

@@ -4,24 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PerformanceTracker {
-    private static class Phase {
-        public Phase(String name, long duration) {
-            this.name = name;
-            this.duration = duration;
-        }
-
-        private String name;
-        private long duration;
-
-        @Override
-        public String toString() {
-            return "Phase{" +
-                "name='" + name + '\'' +
-                ", duration=" + duration +
-                "}\n";
-        }
-    }
-
     // TODO ThreadLocal一般都是 static的
     // TODO 这样使用ThreadLocal，这些数据不用在应用程序之间传递，而且还可以为每个线程保留自己的一份数据
     private static final ThreadLocal<List<Phase>> PHASES = new ThreadLocal<>();
@@ -50,6 +32,23 @@ public class PerformanceTracker {
         phases.forEach(out::append);
         out.append("--------------------------------------\n");
         System.out.println(out.toString());
+    }
+
+    private static class Phase {
+        private String name;
+        private long duration;
+        public Phase(String name, long duration) {
+            this.name = name;
+            this.duration = duration;
+        }
+
+        @Override
+        public String toString() {
+            return "Phase{" +
+                    "name='" + name + '\'' +
+                    ", duration=" + duration +
+                    "}\n";
+        }
     }
 
 }

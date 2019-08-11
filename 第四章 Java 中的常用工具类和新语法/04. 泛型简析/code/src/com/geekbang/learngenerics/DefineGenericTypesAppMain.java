@@ -5,6 +5,7 @@ import com.geekbang.learngenerics.ext.GrandParent;
 import com.geekbang.learngenerics.ext.Parent;
 
 import java.lang.reflect.Field;
+
 // >> TODO 泛型的作用包括：1) 告诉编译器帮我们检查类型是否匹配，类型是什么不重要，类型一样才重要；
 // >> TODO              2) 在使用的地方悄悄的帮我们做类型强制转换。
 public class DefineGenericTypesAppMain {

@@ -17,7 +17,7 @@ public class UseStreamAppMain {
         // TODO 当然也可以使用collector让数据重新生成一个List
         System.out.println("-------------使用collector-----------");
         List<String> longgerStrList = myList.stream().filter(s -> s.length() > 4)
-            .map(String::toUpperCase).collect(Collectors.toList());
+                .map(String::toUpperCase).collect(Collectors.toList());
         longgerStrList.forEach(System.out::println);
 
     }

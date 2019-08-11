@@ -8,7 +8,7 @@ public class MerchandiseV2DescAppMain {
         // >> TODO 非共有的类，不能在包外被使用
 //         NonPublicClassCanUseAnyName asd;
         MerchandiseV2 merchandise = new MerchandiseV2
-            ("书桌", "DESK9527", 40, 999.9, 500);
+                ("书桌", "DESK9527", 40, 999.9, 500);
 
         merchandise.describe();
     }

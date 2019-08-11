@@ -19,7 +19,7 @@ public class Task2 implements Runnable {
         sameSeq();
     }
 
-    private void differentSeq(){
+    private void differentSeq() {
         synchronized (appResources.getResourcePrinter()) {
             // TODO 先申请printer资源
             System.out.println("Task2得到了Printer资源");
@@ -43,7 +43,7 @@ public class Task2 implements Runnable {
         }
     }
 
-    private void sameSeq(){
+    private void sameSeq() {
         synchronized (appResources.getResourceInput()) {
             System.out.println("Task2得到了Input资源");
             System.out.println("Task2开始工作……");

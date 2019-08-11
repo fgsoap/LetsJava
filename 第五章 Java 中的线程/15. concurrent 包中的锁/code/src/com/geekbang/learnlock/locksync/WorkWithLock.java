@@ -95,7 +95,7 @@ public class WorkWithLock implements Runnable {
 
     private void printLockStatus(String phase) {
         System.out.println("Thread:" + Thread.currentThread().getName() + " " + phase
-            + " hold count = " + ((ReentrantLock) lock).getHoldCount());
+                + " hold count = " + ((ReentrantLock) lock).getHoldCount());
 
     }
 

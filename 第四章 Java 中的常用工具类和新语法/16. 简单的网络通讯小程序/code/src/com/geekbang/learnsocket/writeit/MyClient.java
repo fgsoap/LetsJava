@@ -13,7 +13,7 @@ public class MyClient {
 
     private static void commWithServer() {
         try (
-                Socket s = new Socket("localhost", MY_SERVER_PORT);
+                Socket s = new Socket("localhost", MY_SERVER_PORT)
         ) {
 //            System.out.println("客户端连接到：" + s.getRemoteSocketAddress());
             MyChat myChat = new MyChat("服务器端", null, s);

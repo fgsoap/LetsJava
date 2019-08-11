@@ -7,16 +7,16 @@ import com.geekbang.supermarket.ShellColorChangePhone;
 public class ReferenceAssign {
     public static void main(String[] args) {
         Phone ph = new Phone(
-            "手机001", "Phone001", 100, 1999, 999,
-            4.5, 3.5, 4, 128, "索尼", "安卓"
+                "手机001", "Phone001", 100, 1999, 999,
+                4.5, 3.5, 4, 128, "索尼", "安卓"
         );
 
         // >> TODO 可以用子类的引用给父类的引用赋值，也就是说，父类的引用可以指向子类的对象
 
         MerchandiseV2 m = ph;
         MerchandiseV2 m2 = new Phone(
-            "手机002", "Phone002", 100, 1999, 999,
-            4.5, 3.5, 4, 128, "索尼", "安卓"
+                "手机002", "Phone002", 100, 1999, 999,
+                4.5, 3.5, 4, 128, "索尼", "安卓"
         );
 
         // >> TODO 但是反之则不行，不能让子类的引用指向父类的对象。因为父类并没有子类的属性和方法呀
@@ -42,8 +42,8 @@ public class ReferenceAssign {
 
         // MerchandiseV2是Phone的父类，Phone是shellColorChangePhone的父类
         ShellColorChangePhone shellColorChangePhone = new ShellColorChangePhone(
-            "手机002", "Phone002", 100, 1999, 999,
-            4.5, 3.5, 4, 128, "索尼", "安卓"
+                "手机002", "Phone002", 100, 1999, 999,
+                4.5, 3.5, 4, 128, "索尼", "安卓"
         );
 
         // TODO 父类的引用，可以指向子类的对象，即可以用子类（以及子类的子类）的引用给父类的引用赋值

@@ -2,6 +2,7 @@ package com.geekbang.supermarket;
 
 public class Phone extends MerchandiseV2 {
 
+    private static int MAX_BUY_ONE_ORDER = 5;
     // 给Phone增加新的属性和方法
     private double screenSize;
     private double cpuHZ;
@@ -9,7 +10,6 @@ public class Phone extends MerchandiseV2 {
     private int storageG;
     private String brand;
     private String os;
-    private static int MAX_BUY_ONE_ORDER = 5;
 
     public Phone(
             String name, String id, int count, double soldPrice, double purchasePrice,

@@ -2,14 +2,34 @@ package com.geekbang.supermarket;
 
 public class MerchandiseV2 {
 
+    // >> TODO 静态变量使用 static 修饰符
+    public static double DISCOUNT_FOR_VIP = 0.95;
     public String name;
     public String id;
     public int count;
     public double soldPrice;
     public double purchasePrice;
 
-    // >> TODO 静态变量使用 static 修饰符
-    public static double DISCOUNT_FOR_VIP = 0.95;
+    public MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
+        this.name = name;
+        this.id = id;
+        this.count = count;
+        this.soldPrice = soldPrice;
+        this.purchasePrice = purchasePrice;
+        // soldPrice = 9/0;
+    }
+
+    public MerchandiseV2(String name, String id, int count, double soldPrice) {
+        // double purPrice = soldPrice * 0.8;
+        // this(name, id, count, soldPrice, purchasePrice);
+        this(name, id, count, soldPrice, soldPrice * 0.8);
+        // double purPrice = soldPrice * 0.8;
+    }
+
+    public MerchandiseV2() {
+        this("无名", "000", 0, 1, 1.1);
+
+    }
 
     // >> TODO 静态方法使用static修饰符。
     // 静态方法的方法名没有约定俗称全大写
@@ -27,35 +47,14 @@ public class MerchandiseV2 {
         return DISCOUNT_FOR_VIP * activityDiscount;
     }
 
-    public MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
-        this.name = name;
-        this.id = id;
-        this.count = count;
-        this.soldPrice = soldPrice;
-        this.purchasePrice = purchasePrice;
-        // soldPrice = 9/0;
-    }
-
     public String getName() {
         return name;
     }
 
-    public MerchandiseV2(String name, String id, int count, double soldPrice) {
-        // double purPrice = soldPrice * 0.8;
-        // this(name, id, count, soldPrice, purchasePrice);
-        this(name, id, count, soldPrice, soldPrice * 0.8);
-        // double purPrice = soldPrice * 0.8;
-    }
-
-    public MerchandiseV2() {
-        this("无名", "000", 0, 1, 1.1);
-
-    }
-
     public void describe() {
         System.out.println("商品名字叫做" + name + "，id是" + id + "。 商品售价是" + soldPrice
-            + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
-            "。销售一个的毛利润是" + (soldPrice - purchasePrice) + "。折扣为" + DISCOUNT_FOR_VIP);
+                + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
+                "。销售一个的毛利润是" + (soldPrice - purchasePrice) + "。折扣为" + DISCOUNT_FOR_VIP);
     }
 
     public double calculateProfit() {

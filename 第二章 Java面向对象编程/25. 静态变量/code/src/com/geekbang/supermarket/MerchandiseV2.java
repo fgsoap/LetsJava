@@ -7,7 +7,7 @@ public class MerchandiseV2 {
     public int count;
     public double soldPrice;
     public double purchasePrice;
-
+    double discount = 0.95;
 
     public MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
         this.name = name;
@@ -32,8 +32,8 @@ public class MerchandiseV2 {
 
     public void describe() {
         System.out.println("商品名字叫做" + name + "，id是" + id + "。 商品售价是" + soldPrice
-            + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
-            "。销售一个的毛利润是" + (soldPrice - purchasePrice));
+                + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
+                "。销售一个的毛利润是" + (soldPrice - purchasePrice));
     }
 
     public double calculateProfit() {
@@ -44,7 +44,6 @@ public class MerchandiseV2 {
         return profit;
     }
 
-
     public double buy() {
         return buy(1);
     }
@@ -52,8 +51,6 @@ public class MerchandiseV2 {
     public double buy(int count) {
         return buy(count, false);
     }
-
-    double discount = 0.95;
 
     public double buy(int count, boolean isVIP) {
         if (this.count < count) {
