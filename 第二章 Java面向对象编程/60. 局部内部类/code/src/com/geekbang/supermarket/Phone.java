@@ -52,10 +52,11 @@ public class Phone extends MerchandiseV2 {
                         "speed=" + getNumSpec() +
                         ", producer='" + producer + '\'' +
                         '}';
-            }            public void setProducer(String producer) {
-                this.producer = producer;
             }
 
+            public void setProducer(String producer) {
+                this.producer = producer;
+            }
 
 
             // >> TODO 局部内部类，就好像局部变量一样，方法内部的东西出了代码就不可被访问，

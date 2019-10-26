@@ -37,6 +37,7 @@ public class PerformanceTracker {
     private static class Phase {
         private String name;
         private long duration;
+
         public Phase(String name, long duration) {
             this.name = name;
             this.duration = duration;
