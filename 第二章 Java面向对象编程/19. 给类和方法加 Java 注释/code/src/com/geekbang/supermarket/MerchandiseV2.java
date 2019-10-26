@@ -6,10 +6,13 @@ package com.geekbang.supermarket;
  */
 
 
+
 /**
+ *
  * 对这个类的说明
  *
- * @author mzang
+ * @author 作者
+ *
  */
 public class MerchandiseV2 {
     /*
@@ -24,8 +27,8 @@ public class MerchandiseV2 {
 
     public void describe() {
         System.out.println("商品名字叫做" + name + "，id是" + id + "。 商品售价是" + soldPrice
-                + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
-                "。销售一个的毛利润是" + (soldPrice - purchasePrice));
+            + "。商品进价是" + purchasePrice + "。商品库存量是" + count +
+            "。销售一个的毛利润是" + (soldPrice - purchasePrice));
     }
 
     public double calculateProfit() {
@@ -43,7 +46,6 @@ public class MerchandiseV2 {
 
     /**
      * 检查库存够不够数
-     *
      * @param count 目标库存数
      * @return 达到目标库存数，则为true，否则为false
      */
@@ -60,6 +62,7 @@ public class MerchandiseV2 {
     }
 
     /**
+     *
      * @param count
      */
     public void makeEnoughForOneByOne(int count) {
